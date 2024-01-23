@@ -1,9 +1,9 @@
 body {
     font-family: 'Exo 2', sans-serif;
-    color: rgb(179, 166, 166);
     background-color: #000000;
     background-image: linear-gradient(147deg, #000000 0%, #434343 74%);
     height: 1000vh;
+    color: grey;
 }
 .headers {
     display: flex;
@@ -21,9 +21,6 @@ body {
     font-size : 100px;
     text-align: center;
 }
-.about p {
-    font-size: 30px;
-}
 .name:hover {
     color:azure;
     animation: changeColor 0.2s linear;
@@ -37,10 +34,39 @@ body {
     text-align: center;
 }
 .options {
+    margin-top: 50px;
+    margin-bottom: 50px;
     display: flex;
     justify-content: center;
     gap: 20px;
 }
 .options a img {
     width: 80px;
+}
+.about {
+    margin-top: 20px;
+}
+.about span {
+    color: hsl(0 0% 100% / 0.2);
+    -webkit-background-clip: text;
+    background-clip: text;
+    background-repeat: no-repeat;
+    background-size: 0% 100%;
+    background-image: linear-gradient(90deg, rgb(233, 74, 222), rgb(0, 255, 183));
+    animation: scroll-reveal linear forwards;
+    animation-timeline: view();
+}
+.about h1 span {
+    animation-range-start: cover 20vh;
+    animation-range-end: cover 30vh;
+}
+.about h2 span {
+    animation-range-start: cover 22.5vh;
+    animation-range-end: cover 80vh;
+}
+@keyframes scroll-reveal {
+    to { background-size: 100% 100%; }
+}
+.about h2 {
+    font-size: 50px;
 }
