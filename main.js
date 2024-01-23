@@ -4,13 +4,20 @@ function isMobile() {
 }
 let deviceType = isMobile() ? "mobile" : "desktop";
 console.log("Device type:", deviceType);
-let s=document.getElementById('name');
-console.log(s);
+let name=document.getElementById('name');
+let headersTag=document.getElementById('headers');
+let profilePic=document.getElementById('profile-pic');
+console.log(headersTag);
 if(deviceType=='desktop') {
-    s.textContent = 'Hi Desktop User';
+    profilePic.style.height = '250px';
+    profilePic.style.width = '250px';
+    headersTag.style.flexDirection = 'row';
+    headersTag.style.justifyContent = 'left';
+    name.style.paddingLeft = '100px';
+    profilePic.style.paddingLeft = '100px';
+    /*headersTag.style.gap = '10%';*/
 }
 else if(deviceType=='mobile') {
-    s.textContent = 'Hi Mobile User';
 }
 else {
 
