@@ -1,19 +1,15 @@
-let v=0;
-if (/Mobi | Andriod/i.test(navigator.userAgent)) {
-    alert("User is on mobile");
-    v=1;
+function isMobile() {
+    const userAgent = navigator.userAgent || navigator.vendor || window.opera;
+    return /Mobi|Android|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(userAgent);
 }
-else {
-    console.log("User is on desktop");
-    v=2;
-}
-console.log(v);
+let deviceType = isMobile() ? "mobile" : "desktop";
+console.log("Device type:", deviceType);
 let s=document.getElementById('name');
 console.log(s);
-if(v==2) {
+if(deviceType=='desktop') {
     s.textContent = 'Hi Desktop User';
 }
-else if(v==1) {
+else if(deviceType=='mobile') {
     s.textContent = 'Hi Mobile User';
 }
 else {
