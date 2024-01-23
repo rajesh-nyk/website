@@ -7,6 +7,8 @@ console.log("Device type:", deviceType);
 let name=document.getElementById('name');
 let headersTag=document.getElementById('headers');
 let profilePic=document.getElementById('profile-pic');
+let aboutText=document.getElementById('about-text');
+let pageOne=document.getElementById('page1');
 console.log(headersTag);
 if(deviceType=='desktop') {
     profilePic.style.height = '250px';
@@ -15,6 +17,8 @@ if(deviceType=='desktop') {
     headersTag.style.justifyContent = 'left';
     name.style.paddingLeft = '100px';
     profilePic.style.paddingLeft = '100px';
+    aboutText.style.fontSize = '20px';
+    pageOne.style.height = '70vh';
     /*headersTag.style.gap = '10%';*/
 }
 else if(deviceType=='mobile') {
