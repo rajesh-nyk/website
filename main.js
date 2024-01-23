@@ -14,7 +14,7 @@ if(v==2) {
     s.textContent = 'Hi Desktop User';
 }
 else if(v==1) {
-    s.textContent = 'Hi Desktop User';
+    s.textContent = 'Hi Mobile User';
 }
 else {
 
