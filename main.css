@@ -21,6 +21,9 @@ body {
     font-size : 100px;
     text-align: center;
 }
+.about p {
+    font-size: 30px;
+}
 .name:hover {
     color:azure;
     animation: changeColor 0.2s linear;
