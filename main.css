@@ -18,6 +18,7 @@ body {
     border-radius: 50%;
 }
 .name {
+    padding-top: 10px;
     font-size : 100px;
     text-align: center;
 }
@@ -45,6 +46,9 @@ body {
 }
 .about {
     margin-top: 20px;
+    animation: slide 2s linear forwards;
+    transform: translateX(-100%);
+    animation-timeline: view();
 }
 .about span {
     color: hsl(0 0% 100% / 0.2);
@@ -57,15 +61,22 @@ body {
     animation-timeline: view();
 }
 .about h1 span {
-    animation-range-start: cover 20vh;
-    animation-range-end: cover 30vh;
+    animation-range-start: cover 76vh;
+    animation-range-end: cover 78vh;
 }
 .about h2 span {
-    animation-range-start: cover 22.5vh;
-    animation-range-end: cover 80vh;
+    animation-range-start: cover 78vh;
+    animation-range-end: cover 90vh;
+}
+.about {
+    animation-range-start: cover 70.5vh;
+    animation-range-end: cover 76vh;
 }
 @keyframes scroll-reveal {
     to { background-size: 100% 100%; }
+}
+@keyframes slide {
+    to { transform: translateX(0); }
 }
 .about h2 {
     font-size: 50px;
