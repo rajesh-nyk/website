@@ -1,9 +1,15 @@
+.employment {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+}
 .ect {
     background-color: aliceblue;
     height: 30vh;
+    flex: 1;
     display: flex;
     justify-content: space-evenly;
-    align-items: center;
+    align-items: center !important;
     box-shadow: 0px 0px 40px aliceblue;
     border-radius: 20px;
     scale: 0;

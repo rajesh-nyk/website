@@ -3,24 +3,40 @@ body {
     background-color: #000000;
     background-image: linear-gradient(147deg, #000000 0%, #434343 74%);
     height: 1000vh;
-    color: grey;
+    color: rgb(255, 255, 255);
 }
-.page1 {
+.ham {
+    height: 20px;
+    border-top: 5px solid lime;
+    background-color: lime;
+    border-bottom: 5px solid lime;
+    position: static;
+    top: 0;
     display: flex;
-    justify-content:space-evenly;
-    height: 100vh;
+    flex-direction: row;
+    padding-top:  10px;
+    padding-bottom:  10px;
+    align-items: center;
+    justify-content:space-between;
+    font-weight: bolder;
+    font-size: 30px;
+}
+.ham img {
+    height: 40px;
+    width: 40px;
 }
 .headers {
+    height: 100vh;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
+    flex-direction: column !important;
 }
-.headers img {
-    height: 700px;
-    width: 700px;
-    object-fit: cover;
-    border-radius: 70%;
+#profile-pic {
+    height: 100px !important;
+    width: 100px !important;
+    object-fit: cover !important;
+    border-radius: 50%;
 }
 .name {
     padding-top: 10px;
@@ -43,21 +59,24 @@ body {
     justify-content: center !important;
     align-items: center;
     text-align: center;
+    position: relative;
+    animation: slide linear forwards;
+    left: -100%;
+    animation-timeline: view();
+    animation-range-start: 200px;
+    animation-range-end: 300px;
+    
 }
 .options {
-    margin-top: 50px;
-    margin-bottom: 50px;
+    margin-top: 10px;
     display: flex;
     justify-content: center;
     gap: 20px;
+
 }
 .options a img {
-    width: 80px;
-}
-.about {
-    animation: slide 3s linear forwards;
-    transform: translateX(-100%);
-    animation-timeline: view();
+    width: 70px;
+    height: 70px;
 }
 .about h1 {
     margin-bottom: 0;
@@ -88,7 +107,8 @@ body {
     to { background-size: 100% 100%; }
 }
 @keyframes slide {
-    to { transform: translateX(0); }
+    from { left: -100% }
+    to { left: 0 }
 }
 .about h2 {
     font-size: 50px;
@@ -106,6 +126,10 @@ body {
         color:rgb(255, 255, 255)
     }
     .about h1 span, .about h2 {
-        font-size: 30px;
+        font-size: 20px;
+    }
+    .ham {
+        font-size: 10px;
+        height: 10px;
     }
 }

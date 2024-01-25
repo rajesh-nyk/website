@@ -44,6 +44,12 @@
 .skills[data-direction="fast"] {
     --_animation-duration: 10s;
 }
+.myskills-fadeoff {
+    position: relative;
+    animation: myskills-fadeoff linear forwards;
+    animation-timeline: view();
+    animation-range: exit;
+}
 @keyframes moving-scroll {
     to {
         transform: translate(-50%);
@@ -52,4 +58,8 @@
 @keyframes skill-anime {
     from {scale: 0; opacity: 0; transform: translateX(-100%); transform: translateY(-100%)}
     to {scale: 1;opacity: 1;transform: translateX(0); transform: translateY(0); }
+}
+@keyframes myskills-fadeoff {
+    from {top: 0 ; opacity: 1;}
+    to {top: -400px ; opacity: 0;}
 }
