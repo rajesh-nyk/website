@@ -1,0 +1,56 @@
+.ect {
+    background-color: aliceblue;
+    height: 30vh;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    box-shadow: 0px 0px 40px aliceblue;
+    border-radius: 20px;
+    scale: 0;
+    opacity: 0;
+    animation: fade-in linear forwards;
+    animation-timeline: view();
+    animation-range: 250px 500px;
+}
+.ect:hover {
+    background-color: rgb(218, 198, 224);
+    box-shadow: 0px 0px 40px rgb(218, 198, 224);
+}
+.ect img {
+    height: 100px;
+}
+.ect div {
+    text-align: center;
+    font-size: 60px;
+    font-weight: bold;
+    color: black;
+}
+.ect div span {
+    animation: color-change 4s infinite linear;
+}
+.ect div p {
+    font-size: 20px;
+    font-weight: normal;
+}
+.ot {
+    position: relative;
+    top: -20px;
+}
+@keyframes color-change {
+    0% { color: red}
+    25% { color: green}
+    50% { color: blue}
+    75% { color: purple}
+    100% { color: red}
+}
+@keyframes fade-in {
+    from {scale: 0; opacity: 0;}
+    to {scale: 1;opacity: 1; }
+}
+@media (max-width: 500px) {
+    .ect {
+        height: 100vh;
+        flex-direction: column;
+    }
+
+}

@@ -1,0 +1,55 @@
+.my-skills {
+    display: grid;
+    height: 100vh;
+    min-block-size: 100vh;
+    place-content: center;
+    text-align: center;
+    color: azure;
+    animation: skill-anime linear forwards;
+    animation-timeline: view();
+    animation-range: entry;
+}
+.skills {
+    max-width: 80vw;
+}
+.skills img {
+    height: 100px;
+}
+.skills_inner {
+    padding-block: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+.skills[data-animated="true"] {
+    border: 5px solid lime;
+    overflow: hidden;
+    -webkit-mask: linear-gradient(90deg, transparent, white 20%, white 80%, transparent);
+    mask: linear-gradient(90deg, transparent, white 20%, white 80%, transparent);
+}
+.skills[data-animated="true"] .skills_inner {
+    width: max-content;
+    flex-wrap: nowrap;
+    animation: moving-scroll var(--_animation-duration, 10s) var(--_animation-direction, forwards) linear infinite;
+}
+.skills[data-direction="right"] {
+    --_animation-direction: forwards;
+}
+.skills[data-direction="left"] {
+    --_animation-direction: reverse;
+}
+.skills[data-speed="slow"] {
+    --_animation-duration: 40s;
+}
+.skills[data-direction="fast"] {
+    --_animation-duration: 10s;
+}
+@keyframes moving-scroll {
+    to {
+        transform: translate(-50%);
+    }
+}
+@keyframes skill-anime {
+    from {scale: 0; opacity: 0; transform: translateX(-100%); transform: translateY(-100%)}
+    to {scale: 1;opacity: 1;transform: translateX(0); transform: translateY(0); }
+}
